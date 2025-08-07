@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Avantgarde Email Collector</title>
+    <link rel="icon" type="image/gif" href="https://i.ebayimg.com/00/s/NDcyWDczMA==/z/LaEAAOSwBY5d2qSl/$_1.JPG?set_id=8800005007">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comic+Neue:400,700&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #111;
-            /* Changed background-image to Frutiger Aero Reddit image */
             background-image: url("https://cdn.wallpapersafari.com/40/0/aESwt1.jpg");
             background-repeat: repeat;
             background-size: cover;
             background-attachment: fixed;
             color: #00ff99;
-            font-family: "Comic Sans", "Comic Sans MS", cursive, sans-serif;
+            font-family: 'Comic Neue', "Comic Sans MS", "Comic Sans", "Chalkboard SE", cursive, -apple-system, BlinkMacSystemFont, sans-serif;
         }
         @keyframes bgmove {
             0% { background-position: 0 0; }
@@ -83,6 +84,27 @@
             border: 2px dashed #ffff00;
             margin-bottom: 15px;
             padding: 5px 0;
+        }
+        a {
+            color: #ffff00;
+            text-decoration: underline;
+            font-size: 1.1em;
+        }
+        /* Mobile responsive styles */
+        @media (max-width: 600px) {
+            .container {
+                width: 98vw;
+                min-width: 0;
+                margin: 16px auto;
+                padding: 10vw 2vw;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .gif-row img {
+                width: 60px;
+            }
         }
     </style>
 </head>
