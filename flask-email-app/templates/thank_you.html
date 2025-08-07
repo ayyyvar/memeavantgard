@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Meme Avantgarde</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: #111;
+            /* Changed background-image to Frutiger Aero Reddit image */
+            background-image: url("https://cdn.wallpapersafari.com/40/0/aESwt1.jpg");
+            background-repeat: repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #00ff99;
+            font-family: "Comic Sans", "Comic Sans MS", cursive, sans-serif;
+        }
+        @keyframes bgmove {
+            0% { background-position: 0 0; }
+            100% { background-position: 500px 500px; }
+        }
+        .container {
+            background: rgba(0,0,0,0.85);
+            border: 8px double #ff00cc;
+            padding: 40px;
+            margin: 50px auto;
+            width: 420px;
+            text-align: center;
+            box-shadow: 0 0 40px #00ff99, 0 0 10px #ff00cc inset;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-shadow: 3px 3px #ff00cc, 0 0 10px #ffff00;
+            margin-bottom: 25px;
+            animation: rainbow 2s infinite linear;
+        }
+        @keyframes rainbow {
+            0% { color: #ff00cc; }
+            25% { color: #00ff99; }
+            50% { color: #ffff00; }
+            75% { color: #00ffff; }
+            100% { color: #ff00cc; }
+        }
+        label {
+            font-size: 1.3em;
+            color: #ffff00;
+            text-shadow: 1px 1px #00ff99;
+        }
+        input[type="email"] {
+            padding: 12px;
+            border: 3px dotted #00ff99;
+            background: #222 url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnJybjExZXVjbXJqMnNqaTkxbWQ1MXNvdDlzaTc3MXJ4OGtqcm1paiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IfPE0x5gfa5ctKpph6/giphy.gif") repeat-x;
+            color: #fff;
+            margin-bottom: 18px;
+            width: 85%;
+            font-size: 1.1em;
+        }
+        button {
+            background: linear-gradient(90deg, #ff00cc, #00ff99, #ffff00);
+            color: #222;
+            border: 3px solid #00ff99;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+            text-shadow: 1px 1px #fff;
+            box-shadow: 0 0 10px #ff00cc;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1) rotate(-5deg);
+            background: linear-gradient(90deg, #ffff00, #00ff99, #ff00cc);
+        }
+        .gif-row {
+            margin: 18px 0;
+        }
+        marquee {
+            font-size: 1.1em;
+            color: #ff00cc;
+            background: #222;
+            border: 2px dashed #ffff00;
+            margin-bottom: 15px;
+            padding: 5px 0;
+        }
+        a {
+            color: #ffff00;
+            text-decoration: underline;
+            font-size: 1.1em;
+        }
+        /* Mobile responsive styles */
+        @media (max-width: 600px) {
+            .container {
+                width: 98vw;
+                min-width: 0;
+                margin: 16px auto;
+                padding: 10vw 2vw;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .gif-row img {
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <marquee scrollamount="12" behavior="alternate">🔥 Спасибо за подписку! 🔥</marquee>
+    <div class="container">
+        <div class="gif-row">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnBod3l2anV1eWI2MDUwZjZ1MmViaGFydm8waHJnaGJ5Zno2eGJwNCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/lxxOGaDRk4f7R5TkBd/giphy.gif" alt="Cool GIF" width="80">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnJybjExZXVjbXJqMnNqaTkxbWQ1MXNvdDlzaTc3MXJ4OGtqcm1paiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IfPE0x5gfa5ctKpph6/giphy.gif" alt="Sparkle GIF" width="80">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWd4cHNuZTA0ZHM0NXVwanIycDdnajBhcmMxMzI4eWoza2c2Z3I1MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/lJNoBCvQYp7nq/giphy.gif" alt="Doge GIF" width="80">
+        </div>
+        <h1>СПАСИБО!<br><span style="font-size:0.7em;">Теперь ты часть <span style="color:#ffff00;">МЕМ АВАНГАРДА</span>!</span></h1>
+        <p style="font-size:1.2em; color:#00ff99;">Жди письма счастья.<br>Рассказывай друзьям! 🚀</p>
+        <a href="{{ url_for('main_page') }}">← Назад</a>
+        <div class="gif-row">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYm9zMG93d296bWE1czhzcGRnanZhb3VveWVqdGRud3Mwendrb2VhYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Hcw7rjsIsHcmk/giphy.gif" alt="Party GIF" width="80">
+            <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3d3pmaGV2MWNnbHc5NGcyZmFidTgzOTE4NTFzOTNuMHZzdzMxcTJvcyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JKb28stpt0gwg/giphy.gif" alt="Confetti GIF" width="80">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWd4cHNuZTA0ZHM0NXVwanIycDdnajBhcmMxMzI4eWoza2c2Z3I1MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hzBc3HCFc0icM/giphy.gif" alt="Explosion GIF" width="80">
+        </div>
+    </div>
+    <marquee scrollamount="10" direction="right" behavior="alternate">
+        ✨ У меня еще есть канал с телеграме. ✨
+        <a href="https://t.me/meehman" target="_blank" style="color:#00ff99; text-decoration:underline; margin-left:10px;">
+            t.me/meehman
+        </a>
+    </marquee>
+</body>
+</html>
